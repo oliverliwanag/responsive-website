@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1</title>
+    <style>
+        body {
+            margin: 0%;
+            font-family: "Geist Mono", monospace;
+            font-weight: bolder;
+            background-color: white
+        }
+
+        header {
+            width: 100%;
+            height: 30vh;
+            background: url(header.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        header h1, header h4 {
+            margin: 5px;
+            color: white;
+            text-shadow: 0px 0px 5px black;
+        }
+
+        nav {
+            width: 100%;
+            display: flex;
+            background: #6f5acd;
+        }
+
+        nav a{
+            font-size: 15px;
+            padding: 20px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .navbar a:hover,
+        .navbar a.active{
+            color: #4c3d8f;
+        }
+
+        .contents {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .about, .description {
+            height: 50vh;
+            padding: 20px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            background-color: white;
+            border: 4px solid black;
+            box-shadow: 5px 7px 0 black;
+            border-radius: 10px;
+            margin-left: 30px;
+        }
+
+        .about {
+            width: 250px;
+            flex-shrink: 0;
+            flex-grow: 1;
+        }
+
+        .description {
+            margin-right: 30px;
+            min-width: 250px;
+            width: 600px;
+            flex-grow: 5;
+        }
+
+        .aboutphoto, .descriptionphoto {
+            width: 100%;
+            height: 70%;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        @media screen and (max-width: 768px) 
+        {
+            header {
+                height: 20vh;
+            }
+
+            .contents {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .about, .description {
+                height: 440px;
+                width: 290px;
+                flex: 230px;   
+            }
+            
+            .aboutphoto, .descriptionphoto {
+                height: 75%;
+            }
+
+            .about {
+                margin-right: 30px;
+            }
+        }
+
+        @media screen and (max-width: 360px) 
+        {
+            nav {
+                justify-content: center;
+            }
+
+            .about, .description{
+                width: 250px;
+            }
+
+            .description {
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Piplup Paradise</h1>
+        <h4>Waddling into adventure!</h4>
+    </header>
+    <nav class="navbar">
+        <a href="">HOME</a>
+        <a href="">ABOUT</a>
+        <a href="">CONTACT</a>
+        <a href="">MORE</a>
+    </nav>
+
+    <div class="contents">
+        <div class="about">
+            <h1>Piplup</h1>
+            <p>Water-type Pokémon</p>
+            <img src="image1.jpg" alt="Image" class="aboutphoto">
+        </div>
+
+        <div class="description">
+            <h1>Mr. Waddles</h1>
+            <p>Cute and Independent</p>
+            <img src="image2.jpg" alt="Image" class="descriptionphoto">
+        </div>
+    </div>
+</body>
+</html>
